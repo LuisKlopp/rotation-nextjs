@@ -26,14 +26,14 @@ interface IItem {
   };
 }
 
-const DetailStatic = ({ item }: any) => {
+const DetailStatic = ({ item }: IItem) => {
   return (
     <div>
       {item && (
         <div className='Detail'>
           <h1 style={{ color: '#fff' }}>with Static Generation</h1>
-          <h1>{item.title}</h1>
-          <p>{item.body}</p>
+          <h1>{item.created_at}</h1>
+          <p>{item.product_type}</p>
           <p>{item.id}번째 게시글</p>
         </div>
       )}
